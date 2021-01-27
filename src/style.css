@@ -107,7 +107,7 @@ a {
   margin: 15px auto 15px;
   font-size: 10px;
   color: #09203f;
-  padding: 2px !important;
+  padding: 1px !important;
   max-width: 46px !important;
   height: 100px;
   text-align: center;
@@ -116,7 +116,7 @@ a {
 }
 
 .week-day {
-  font-size: 8.5px;
+  font-size: 8.3px;
   padding-top: 8px;
   margin-bottom: 10px;
 }
