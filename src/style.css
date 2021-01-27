@@ -3,7 +3,7 @@ body {
 }
 
 .app-screen {
-  max-width: 350px;
+  width: 350px;
   height: 750px;
   margin: 30px auto 0;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -23,19 +23,25 @@ body {
   margin: 0 auto;
 }
 
+.form-group {
+  padding: 0 !important;
+}
+
 .search {
   font-size: 12px !important;
 }
 
 .btn {
   font-size: 12px !important;
-  padding: 6px 5px !important;
+  padding: 6px 6px !important;
   display: inline;
-  margin: 0 auto;
+  margin: 0 5px;
+  background-color: #09203f !important;
+  border-color: #09203f !important;
 }
 
 .today {
-  padding: 10px 20px 0;
+  padding: 0 20px;
 }
 
 h1 {
@@ -52,24 +58,39 @@ h5 {
 .emoji {
   font-size: 170px;
   text-align: center;
-  line-height: 245px;
+  line-height: 260px;
   margin-bottom: 5px;
 }
 
 .temperature {
   text-align: center;
   color: #fff;
-  padding-top: 10px;
+  padding-top: 0;
 }
 
 .main-temp {
-  font-size: 75px;
+  font-size: 80px;
   line-height: 20px;
+}
+
+.units {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  color: #eeeeee;
+  line-height: 20px;
+  padding-top: 12px;
+}
+
+.min-temp,
+.max-temp {
+  font-weight: 300 !important;
+  font-size: 20px;
 }
 
 .other-days {
   margin: 0 !important;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 21px;
   width: 100%;
   height: 150px;
@@ -78,21 +99,32 @@ h5 {
 
 .days {
   background-color: #fff;
-  margin: 30px auto 30px;
+  margin: 15px auto 15px;
   font-size: 10px;
   color: #09203f;
   padding: 2px !important;
   max-width: 46px !important;
-  height: 70px;
+  height: 100px;
   text-align: center;
   border-radius: 10px;
   border: solid 0.5px #eeeeee;
 }
 
 .week-day {
-  font-size: 8px;
-  padding-top: 10px;
+  font-size: 8.5px;
+  padding-top: 8px;
   margin-bottom: 10px;
+}
+
+.emoji-p {
+  font-size: 15px;
+  margin: 3px auto !important;
+}
+
+.temp {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 auto;
 }
 
 .sign {
