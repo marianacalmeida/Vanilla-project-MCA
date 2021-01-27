@@ -68,6 +68,11 @@ h5 {
   padding-top: 0;
 }
 
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
 .main-temp {
   font-size: 80px;
   line-height: 20px;
