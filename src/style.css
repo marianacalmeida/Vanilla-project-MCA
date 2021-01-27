@@ -1,10 +1,14 @@
+body {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
 .app-screen {
-  max-width: 325px;
-  height: 700px;
+  max-width: 350px;
+  height: 750px;
   margin: 30px auto 0;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   border-radius: 25px;
-  padding: 20px;
+  padding: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
 }
 
@@ -14,23 +18,81 @@
   border-collapse: collapse;
 }
 
+.form-row {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.search {
+  font-size: 12px !important;
+}
+
+.btn {
+  font-size: 12px !important;
+  padding: 6px 5px !important;
+  display: inline;
+  margin: 0 auto;
+}
+
+.today {
+  padding: 10px 20px 0;
+}
+
 h1 {
   color: #fff;
+  margin-bottom: 5px !important;
+}
+
+h5 {
+  color: #fff;
+  font-weight: 300 !important;
+  font-size: 17px !important;
 }
 
 .emoji {
-  font-size: 150px;
+  font-size: 170px;
   text-align: center;
+  line-height: 245px;
+  margin-bottom: 5px;
 }
 
 .temperature {
   text-align: center;
   color: #fff;
+  padding-top: 10px;
+}
+
+.main-temp {
+  font-size: 75px;
+  line-height: 20px;
 }
 
 .other-days {
+  margin: 0 !important;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 21px;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+}
+
+.days {
   background-color: #fff;
-  margin: 0 10px 20px !important;
+  margin: 30px auto 30px;
+  font-size: 10px;
+  color: #09203f;
+  padding: 2px !important;
+  max-width: 46px !important;
+  height: 70px;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 0.5px #eeeeee;
+}
+
+.week-day {
+  font-size: 8px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .sign {

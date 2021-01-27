@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body>
@@ -15,9 +20,25 @@
             <tr>
                 <td valign="top">
                  
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <input type="search" class="form-control search" id="searchInput" placeholder="Search city" />
+                            </div>
+                            <div class="form-group col-md-7">
+                                <button type="submit" class="btn btn-primary" id="button">
+                                    Submit
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-current" id="currentLocation">
+                                    Current Location
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
         <div class="today">
             <h1 class="location">Porto</h1>
-            <h4 class="date">Friday, 13:13</h4>
+            <h5 class="date">Sunday, 13:13</h5>
                 <p class="emoji">🌩</p>
                 <div class="row">
                     <div class="col-4">
@@ -38,22 +59,28 @@
                
             
     <div class="row other-days">
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Today</p>
             <p>23º</p>
         </div>
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Monday</p>
             <p>23º</p>
         </div>
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Tuesday</p>
             <p>23º</p>
         </div>
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Wednesday</p>
             <p>23º</p>
         </div>
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Thursday</p>
             <p>23º</p>
         </div>
-        <div class="col-2">
+        <div class="col-2 days">
+            <p class="week-day">Friday</p>
             <p>23º</p>
         </div>
     </div>
