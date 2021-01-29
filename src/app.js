@@ -50,6 +50,18 @@ function myPosition(position) {
     let maxElement = document.querySelector("#max");
     maxElement.innerHTML = `${maxTemp}º`;
     //
+    let wind = Math.round((response.data.wind.speed)*3.6)
+     let windElement = document.querySelector("#wind");
+    windElement.innerHTML = `wind: ${wind}km/h`;
+    //
+     let text = response.data.weather[0].description
+     let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = text;
+    //
+    //let rain = Math.round(response.data.precipitation.value);
+     //let rainElement = document.querySelector("#rain");
+    //rainElement.innerHTML = `Precipitation:${rain}mm`;
+    //
      let dateElement = document.querySelector("#date");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
     //

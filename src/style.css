@@ -58,8 +58,8 @@ h5 {
 .emoji {
   font-size: 170px;
   text-align: center;
-  line-height: 260px;
-  margin-bottom: 5px;
+  line-height: 150px;
+  margin-bottom: 40px;
 }
 
 .emoji img {
@@ -71,6 +71,13 @@ h5 {
   text-align: center;
   color: #fff;
   padding-top: 0;
+}
+
+.infos {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+  font-size: 10px;
 }
 
 a {
