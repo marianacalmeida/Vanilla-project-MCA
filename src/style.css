@@ -6,10 +6,22 @@ body {
   width: 350px;
   height: 750px;
   margin: 30px auto 0;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   border-radius: 25px;
   padding: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+.sunny-day {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.cloudy-day {
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+.night {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 .main_div {
@@ -58,8 +70,8 @@ h5 {
 .emoji {
   font-size: 170px;
   text-align: center;
-  line-height: 150px;
-  margin-bottom: 40px;
+  line-height: 130px;
+  margin-bottom: 30px;
 }
 
 .emoji img {
@@ -71,6 +83,10 @@ h5 {
   text-align: center;
   color: #fff;
   padding-top: 0;
+}
+
+.row-infos {
+  margin-top: 10px;
 }
 
 .infos {

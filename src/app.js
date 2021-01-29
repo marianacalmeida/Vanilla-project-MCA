@@ -19,8 +19,19 @@ let days = [
     if (minutes < 10){
         minutes = `0${minutes}`;
     };
+
+
+ function night(){
+    let bgElement = document.querySelector("#background");
+    bgElement.classList.add("night");
+    };
+
+    if (hours > 18 ) {
+   night()};
+
     
-return `${day}, ${hours}:${minutes}`
+return `${day}, ${hours}:${minutes}`;
+
 }
 
 
@@ -51,18 +62,19 @@ function myPosition(position) {
     minElement.innerHTML = `${minTemp}º`;
     let maxElement = document.querySelector("#max");
     maxElement.innerHTML = `${maxTemp}º`;
+   
     //
-    let wind = Math.round((response.data.wind.speed)*3.6)
+    let wind = Math.round((response.data.wind.speed)*3.6);
      let windElement = document.querySelector("#wind");
     windElement.innerHTML = `wind: ${wind}km/h`;
     //
-     let text = response.data.weather[0].description
+     let text = response.data.weather[0].description;
      let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = text;
     //
-    //let rain = Math.round(response.data.precipitation.value);
-     //let rainElement = document.querySelector("#rain");
-    //rainElement.innerHTML = `Precipitation:${rain}mm`;
+    let humidity = Math.round(response.data.main.humidity);
+     let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `humidity: ${humidity}%`;
     //
      let dateElement = document.querySelector("#date");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -70,7 +82,20 @@ function myPosition(position) {
     let iconElement = document.querySelector("#icon");
     let iconCode = response.data.weather[0].icon;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${iconCode}@2x.png`);
-}
+
+     //
+
+
+    function cloudyDay(){
+    let bgElement = document.querySelector("#background");
+    bgElement.classList.add("cloudy-day");
+    };
+
+
+    if (humidity > 60 ) {
+   cloudyDay()};
+
+};
 
   axios
     .get(`${apiUrl}lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
@@ -130,6 +155,12 @@ let celElement = document.querySelector("#cel");
 fahElement.addEventListener("click", showFahrenheit);
 celElement.addEventListener("click", showCelsius);
 
+
+
+
+
+
+
 }
 
 function getCurrentPosition() {
@@ -143,4 +174,5 @@ current.addEventListener("click", getCurrentPosition);
 
 
 getCurrentPosition();
+
 
