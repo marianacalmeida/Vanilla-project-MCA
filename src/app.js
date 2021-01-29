@@ -39,12 +39,14 @@ function myPosition(position) {
     let tempElement = document.querySelector("#currentTemp");
     tempElement.innerHTML = `${mainTemp}º`;
 //
+    celsius = response.data.main.temp
+//
     let city = response.data.name;
      let cityElement = document.querySelector("#city");
     cityElement.innerHTML = city;
     //
-    let minTemp = Math.round(response.data.main.temp_min)
-    let maxTemp = Math.round(response.data.main.temp_max)
+    minTemp = Math.round(response.data.main.temp_min);
+    maxTemp = Math.round(response.data.main.temp_max);
      let minElement = document.querySelector("#min");
     minElement.innerHTML = `${minTemp}º`;
     let maxElement = document.querySelector("#max");
@@ -87,11 +89,46 @@ function submitCity(event){
     search(cityInputElement.value);
 }
 
+function showFahrenheit(event){
+event.preventDefault();
+let tempElement = document.querySelector("#currentTemp");
+let FahrTemp = Math.round((celsius * 9) / 5 + 32);
+let minElement = document.querySelector("#min");
+let minFahr = Math.round((minTemp * 9) / 5 + 32);
+let maxElement = document.querySelector("#max");
+let maxFahr = Math.round((maxTemp * 9) / 5 + 32);
+tempElement.innerHTML = `${FahrTemp}º`;
+minElement.innerHTML = `${minFahr}º`;
+maxElement.innerHTML = `${maxFahr}º`;
+
+celElement.classList.remove("active");
+fahElement.classList.add("active");
+}
+
+function showCelsius(event){
+event.preventDefault();
+let tempElement = document.querySelector("#currentTemp");
+tempElement.innerHTML = `${Math.round(celsius)}º`;
+let minElement = document.querySelector("#min");
+minElement.innerHTML = `${Math.round(minTemp)}º`;
+let maxElement = document.querySelector("#max");
+maxElement.innerHTML = `${Math.round(maxTemp)}º`;
+
+celElement.classList.add("active");
+fahElement.classList.remove("active");
+}
+
+let celsius = null;
+let minTemp = null;
+let maxTemp = null;
+
 let form = document.querySelector("#searchForm")
 form.addEventListener("submit", submitCity)    
 
-
-
+let fahElement = document.querySelector("#fah");
+let celElement = document.querySelector("#cel");
+fahElement.addEventListener("click", showFahrenheit);
+celElement.addEventListener("click", showCelsius);
 
 }
 
