@@ -41,7 +41,6 @@ function myPosition(position) {
             bgElement.classList.add("night");
             };
 
-           
 
             if(hours > 18) { night();
              isNight = true;
@@ -106,7 +105,7 @@ function myPosition(position) {
             //
             let iconElement = document.querySelector("#icon");
             let iconCode = response.data.weather[0].icon;
-            iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${iconCode}@2x.png`);
+            iconElement.setAttribute("src", `img/${iconCode}.png`);
 
             //
 
@@ -159,7 +158,7 @@ if(!isNight) {
                     forecastElement.innerHTML += `
                         <div class="col-2 days">
                             <p class="week-day" id="dayTwo">${formatHours(forecast.dt * 1000)}</p>
-                            <p class="emoji-p"><img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" id="icon"></p>
+                            <p class="emoji-p"><img src="img/${forecast.weather[0].icon}.png" alt="" id="icon"></p>
                             <p class="temp"><strong>${Math.round(forecast.main.temp_max)}º</strong></p>
                             <p class="temp">${Math.round(forecast.main.temp_min)}º</p>
                         </div>

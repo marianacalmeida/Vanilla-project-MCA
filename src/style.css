@@ -75,11 +75,11 @@ h5 {
   font-size: 170px;
   text-align: center;
   line-height: 150px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .emoji img {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 
@@ -166,11 +166,11 @@ a {
 .emoji-p {
   font-size: 12px;
 
-  margin: 2px auto !important;
+  margin: 7px auto 5px !important;
 }
 
 .emoji-p img {
-  width: 35px;
+  width: 25px;
   height: auto;
 }
 
