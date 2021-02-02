@@ -107,17 +107,26 @@ function myPosition(position) {
             //
 
 
-                    function cloudyDay(){
+            function cloudyDay(){
                     let bgElement = document.querySelector("#background");
                     bgElement.classList.add("cloudy-day");
-                    };
+             };
+
+            function sunnyDay(){
+                    let bgElement = document.querySelector("#background");
+                    bgElement.classList.add("cloudy-day");
+             };
 
 
-                    if (humidity > 60 ) {
+            if (humidity > 60 ) {
                     cloudyDay()};
 
+            if (humidity < 25 ) {
+                    sunnyDay()};
+                
 
-                    function displayForecast(response){
+
+            function displayForecast(response){
                 
                     let forecastElement = document.querySelector("#forecast");
                     forecastElement.innerHTML = null;
@@ -135,11 +144,9 @@ function myPosition(position) {
                             <p class="temp"><strong>${Math.round(forecast.main.temp_max)}º</strong></p>
                             <p class="temp">${Math.round(forecast.main.temp_min)}º</p>
                         </div>
-                        ` 
+                      ` 
                     }
-
-      
-                }
+            }
 
                 apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
                     axios.get(apiUrl).then(displayForecast);
