@@ -35,13 +35,17 @@ function myPosition(position) {
             };
 
 
+
         function night(){
             let bgElement = document.querySelector("#background");
             bgElement.classList.add("night");
             };
 
-            if (hours > 18 ) {
-        night()};
+           
+
+            if(hours > 18) { night();
+             isNight = true;
+            }
 
             
         return `Last updated: ${day}, ${hours}:${minutes}`;
@@ -107,22 +111,37 @@ function myPosition(position) {
             //
 
 
-            function cloudyDay(){
-                    let bgElement = document.querySelector("#background");
-                    bgElement.classList.add("cloudy-day");
-             };
+              function cloudyDay() {
+      let bgElement = document.querySelector("#background");
+      bgElement.className = "app-screen";
+      bgElement.classList.add("cloudy-day");
+    }
 
-            function sunnyDay(){
-                    let bgElement = document.querySelector("#background");
-                    bgElement.classList.add("sunny-day");
-             };
+         function sunnyDay() {
+      let bgElement = document.querySelector("#background");
+      bgElement.className = "app-screen";
+      bgElement.classList.add("sunny-day");
+    }
+
+    function normalDay() {
+      let bgElement = document.querySelector("#background");
+      bgElement.className = "app-screen";
+      bgElement.classList.add("day");
+    }
 
 
-            if (humidity > 60 ) {
-                    cloudyDay()};
+if(!isNight) {
+    if (humidity > 60) {
+      cloudyDay();
+    }
+    if (humidity < 25) {
+      sunnyDay();
+    }
+    if (humidity > 25 && humidity < 60) {
+      normalDay();
+    }
+}
 
-            if (humidity < 25 ) {
-                    sunnyDay()};
                 
 
 
@@ -219,6 +238,8 @@ celElement.addEventListener("click", showCelsius);
 
 
 }
+
+ let isNight = false;
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(myPosition);
