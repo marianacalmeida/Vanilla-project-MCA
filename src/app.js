@@ -44,7 +44,7 @@ function myPosition(position) {
         night()};
 
             
-        return `${day}, ${hours}:${minutes}`;
+        return `Last updated: ${day}, ${hours}:${minutes}`;
 
         }
 
@@ -136,7 +136,6 @@ function myPosition(position) {
                             <p class="temp">${Math.round(forecast.main.temp_min)}º</p>
                         </div>
                         ` 
-                        
                     }
 
       
