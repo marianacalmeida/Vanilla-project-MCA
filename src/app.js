@@ -114,7 +114,7 @@ function myPosition(position) {
 
             function sunnyDay(){
                     let bgElement = document.querySelector("#background");
-                    bgElement.classList.add("cloudy-day");
+                    bgElement.classList.add("sunny-day");
              };
 
 
