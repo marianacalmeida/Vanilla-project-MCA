@@ -74,12 +74,12 @@ h5 {
 .emoji {
   font-size: 170px;
   text-align: center;
-  line-height: 150px;
+  line-height: 160px;
   margin-bottom: 45px;
 }
 
 .emoji img {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
@@ -166,7 +166,7 @@ a {
 .emoji-p {
   font-size: 12px;
 
-  margin: 7px auto 5px !important;
+  margin: 6px auto 6px !important;
 }
 
 .emoji-p img {
