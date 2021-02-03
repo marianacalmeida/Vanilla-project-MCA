@@ -100,6 +100,9 @@ function myPosition(position) {
             let humidityElement = document.querySelector("#humidity");
             humidityElement.innerHTML = `humidity: ${humidity}%`;
             //
+            let clouds = response.data.clouds.all;
+            console.log(clouds);
+            //
             let dateElement = document.querySelector("#date");
             dateElement.innerHTML = formatDate(response.data.dt * 1000);
             //
@@ -130,13 +133,13 @@ function myPosition(position) {
 
 
 if(!isNight) {
-    if (humidity > 60) {
+    if (clouds >= 60) {
       cloudyDay();
     }
-    if (humidity < 25) {
+    if (clouds <= 10) {
       sunnyDay();
     }
-    if (humidity > 25 && humidity < 60) {
+    if (clouds > 10 && clouds < 60) {
       normalDay();
     }
 }
