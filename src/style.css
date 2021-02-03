@@ -101,7 +101,7 @@ h5 {
   font-size: 12px;
 }
 
-a {
+.main-temp a {
   color: #fff !important;
   text-decoration: none;
   font-weight: 300;
@@ -109,7 +109,7 @@ a {
 
 .active {
   cursor: default;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .active:hover {
@@ -186,4 +186,13 @@ a {
   font-size: 10px;
   padding-top: 10px;
   color: #09203f;
+}
+
+.sign a {
+  text-decoration: underline;
+  color: #09203f;
+}
+
+.sign a:hover {
+  color: #fda085;
 }
